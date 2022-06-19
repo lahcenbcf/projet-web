@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div class="div-logo">
+            <h1>TFSTEP.</h1>
+
+            <h2>Regain your confidence to build a bright future</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum magni asperiores neque vitae fugit! Eum, maxime?</p>
+        <button id="btn">login</button>
+        
+        </div>
+        <div class="div-img">
+            <div class="items">
+                <ul>
+                    <li><a href="#" class="bg bg-white border-2 border-rounded border-white text-black-50 p-2">Home</a>
+                    </li>
+                    <li><a href="#" class="bg bg-white border-2 border-rounded border-white text-black-50 p-2">About</a></li>
+                    <li><a href="#" class="bg bg-white border-2 border-rounded border-white text-black-50 p-2">More</a></li>
+                   </ul>
+                   <div id="btnbar"></div>
+            </div>
+           
+           <h1>REGISTER NOW</h1>
+        </div>
+       
+    </header>
+
+    <div class="container">
+        <div class="active">
+            <h3>EFFEICEINTY</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, iure!</p>
+        </div>
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="active">
+            <h3>QUALITY</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, iure!</p>
+        </div>
+        <div class="active">
+            <h3>SERVICE</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, iure!</p>
+        </div>
+        <div class="div3"></div>
+    </div>
+<div id="slider">
+ 
+</div>
+
+
+    <div id="content">
+        <button id="gauche"><</button>
+           <h1 id="h1">Basic page</h1>
+           <button id="droite">></button>
+           <p id="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est rem eligendi placeat ipsam reprehenderit!</p>
+   <a href="#" id="readbtn">read</a> </div>
+
+<h2>Contact Us</h2>
+<div class="contactinfo">
+<div id="slide">
+    
+</div>
+<div class="form">
+    <form action="">
+        <label>Full name:
+            <input type="text" placeholder="name">
+        </label>
+        <label>E-mail:
+            <input type="email" placeholder="email">
+        </label>
+        <label>Password:
+            <input type="password" placeholder="password">
+        </label>
+        <textarea id="textarea" placeholder="tapez le message" cols="30" rows="10"></textarea>
+
+        <a href="#" id="submit">submit</a>
+    </form>
+</div>
+
+</div>
+
+
+    <footer>
+        Developped by lahcen bcf 2022
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        const btn=document.getElementById('btnbar')
+        const list=document.getElementsByTagName('ul')[0]
+        btn.addEventListener('click',function (){
+            if(btn.style.backgroundColor='white'){
+                list.className='open';
+                btn.style.backgroundColor='#333'
+            }
+        else{
+            list.className='';
+                btn.style.backgroundColor='white' 
+        }
+               
+           
+          
+           
+        })
+
+        
+        
+
+        var array=[
+            {title:'Basic page',
+        paragraph:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est rem eligendi placeat ipsam reprehenderit!',
+    },{
+        title:'Secondary page',
+        paragraph:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est rem eligendi placeat ipsam reprehenderit!'
+    
+    },{
+        title:'Third page',
+        paragraph:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est rem eligendi placeat ipsam reprehenderit!'
+    }
+        ]
+const title=document.getElementById('h1');
+const par=document.getElementById('p');
+const content=document.getElementById('content')
+var i=0;
+        function permuter(){
+        
+            title.innerHTML=array[i].title;
+            par.innerHTML=array[i].paragraph;
+if(i==0){
+    content.className='open1'
+}
+if(i==1){
+    content.className='open2'
+}
+if(i==2){
+    content.className='open3'
+}
+if(i<array.length-1){
+    i++;
+}else
+{
+    i=0;
+}
+        }
+
+
+        function permuterG(){
+        
+        title.innerHTML=array[i].title;
+        par.innerHTML=array[i].paragraph;
+if(i==0){
+content.className='open1'
+}
+if(i==1){
+content.className='open2'
+}
+if(i==2){
+content.className='open3'
+}
+if(i>0){
+i--;
+}else
+{
+i=array.length-1;
+}
+    
+      
+    }
+    document.getElementById('droite').onclick=permuter
+        document.getElementById('gauche').onclick=permuterG
+    const slider=document.getElementById('slider');
+var j=0;
+        function change(){
+if(j==0){
+slider.className='open1'
+}
+if(j==1){
+slider.className='open2'
+}
+if(j==2){
+slider.className='open3'
+}
+if(j<2){
+j++;
+}else
+{
+j=0;
+}
+    }
+
+setInterval(change,3000)
+var k=0
+const slide=document.getElementById('slide');
+function swap(){
+if(k==0){
+slide.className='open1'
+}
+if(k==1){
+slide.className='open2'
+}
+if(k==2){
+slide.className='open3'
+}
+if(k==3){
+slide.className='open4'
+}
+if(k==4){
+slide.className='open5'
+}
+if(k==5){
+slide.className='open6'
+}
+if(k<5){
+k++;
+}else
+{
+k=0;
+}
+    
+}
+
+setInterval(swap,3000)
+    </script>
+</body>
+</html>

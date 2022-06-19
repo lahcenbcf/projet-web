@@ -1,0 +1,409 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  
+}
+
+
+@media (max-width:500px) {
+    #btnbar{
+ position: absolute;
+ background-color:white;
+ position: fixed;
+ cursor: pointer;
+ width: 30px;
+ height: 30px;
+ border-radius: 50%;
+ top: 1em;
+ right: 1em;
+    }
+     ul{
+        height: 100vh;
+        width: 50%;
+        position: fixed;
+        right: 0;
+        transition: 2s ease-in-out;
+        top: -2em;
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .items ul li a{
+     padding: 100%;
+       width: 100%;
+        margin-top: 1em;
+        text-align: center;
+    
+
+    }
+  
+}
+ul.open{
+   right: -100%;
+    transition:2s ease-in-out;
+}
+header .div-img{
+    background-color:#333;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    
+}
+.items{
+    display: flex;
+ justify-content: center;
+}
+.div-img ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 60px;
+    margin-bottom: 150px;
+}
+.div-img h1{
+    color: white;
+    font-size: xxx-large;
+    text-align: center;
+    font-family: monospace;
+    letter-spacing: 5px;
+
+
+}
+.div-img h1:hover{
+    letter-spacing: 8px;
+    transition: .4s ease-out;
+}
+.div-img ul li a{
+    text-decoration: none;
+    font-family: monospace;
+    font-size: x-large;
+
+}
+.div-img ul li a:hover{
+background-color: #333;
+color: white;
+transition: .4s ease-out;
+}
+
+.div-logo{
+    display: flex;
+    flex-direction: column;
+    margin:20px 60px;
+}
+.div-logo h1{
+    letter-spacing: 3px;
+    font-family: monospace;
+}
+.div-logo h2{
+    letter-spacing: 5px;
+    margin-top: 70px;
+    font-family: monospace;
+    font-size: xxx-large;
+ 
+}
+.div-logo p{
+    letter-spacing: 2px;
+    margin-top: 20px;
+    font-family: cursive;
+
+}
+#btn{
+    background-color: white;
+   width: 30%;
+    letter-spacing: 4px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #333;
+}
+#btn:hover{
+    background-color: black;
+    color: white;
+    transition: .4s ease-out;
+}
+
+.container{
+    height: auto;
+    margin: 30px auto;
+    width: 60%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 50% 50%;
+}
+.container .active{
+    color: #333;
+    font-family: monospace;
+    height: 100px;
+    margin: 20px 40px;
+}
+.container h3{
+    text-align: right;
+}
+.container .div1{
+    background-image: url('../nathana-reboucas-3YSDTzqnVtQ-unsplash.jpg');
+    background-size: cover;
+    object-fit: cover;
+}
+.div3:hover,.div2:hover,.div1:hover{
+    opacity: .5;
+    transition: all .5s linear;
+}
+.container .div2{
+    background-image: url('../revendo-M7_rJ4LF-jk-unsplash.jpg');
+    background-size: cover;
+    object-fit: cover;
+}
+.container .div3{
+    background-image: url('../2h-media-4blzwmR6q3o-unsplash.jpg');
+    background-size: cover;
+    object-fit: cover;
+}
+@media (max-width:500px) {
+    .container{
+        grid-template-columns: 1fr;
+        align-self: center;
+        justify-self: center;
+    }
+    header{
+        grid-template-columns: 1fr;
+        align-self: center;
+        justify-self: center;
+    }
+    header .div-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #333;
+    color: white;
+    height: 70px;
+        text-align: center;
+    padding: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+}
+
+#slider{
+    width: 30%;
+    height: 30rem;
+    border: 1px solid white;
+    margin: 1.5em auto;
+    background-repeat: no-repeat;
+    background-image: url('../img/1653755421874.jpg');
+background-size: cover;
+}
+
+
+#content{
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    height: 30rem;
+    margin: 30px auto;
+    justify-content: center;
+    position: relative;
+}
+#content h1{
+font-family: monospace;
+color: white;
+font-size: 5rem;
+}
+#content p{
+    color:white;
+    margin: 20px;
+    letter-spacing: 3px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 60%;
+
+}
+#content #readbtn{
+    text-decoration: none;
+    border: 1px solid white;
+    background-color: white;
+    font-family: monospace;
+    padding: 10px;
+}
+#gauche{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background:transparent;
+    color: white;
+    font-size: 30px;
+}
+
+#droite{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 30px;
+    background:transparent;
+    color: white;
+    font-size: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+
+}
+
+#content.open1{
+    background-image: url('../img/5.jpg');
+    transition: all 1s ease-in-out;
+}
+#content.open2{
+    background-image: url('../img/ichsan-wicaksono-0vaM_hMuTkA-unsplash.jpg');
+    transition: all 1s ease-in-out;
+
+}
+
+#content.open3{
+    background-image: url('../img/mehmet-turgut-kirkgoz-3twLGYZYMBY-unsplash.jpg');
+    transition: all 1s ease-in-out;
+}
+
+
+
+#slider.open1{
+    background-image: url('../img/1653755421874.jpg');
+  
+}
+#slider.open2{
+    background-image: url('../img/1653755421889.jpg');
+   
+
+}
+
+#slider.open3{
+    background-image: url('../img/1653755421881.jpg');
+  
+}
+h2{
+    font-family: monospace;
+    text-align: center;
+    font-size: 2rem;
+}
+.contactinfo{
+    height: auto;
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+}
+.contactinfo >div{
+    width: 50%;
+   
+
+}
+.contactinfo .form{
+    
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 40% 75%, 0% 75%);
+background-color: #333;
+    width: 50%;
+    animation: translate 2s infinite;
+height: 30rem;
+}
+
+
+form{
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+    z-index: 10;
+   
+}
+.contactinfo form input{
+    display: block;
+    width: 70%;
+    padding: 10px;
+    z-index: 10;
+    border: 1px solid #333;
+    margin: 10px 0;
+    
+
+}
+form #submit{
+    padding: 10px;
+    text-decoration: none;
+    border:1px solid #333;
+    background-color: #333;
+    color: white;
+    font-family: monospace;
+}
+.contactinfo #textarea{
+    width: 70%;
+    display: block;
+   
+}
+
+.contactinfo form label{
+    font-family: monospace;
+    letter-spacing: 5px;
+    color: white;
+}
+#slide{
+background-image: url('../img/1.jpg');
+background-size: cover;
+height: 100%;
+width: 40%;
+position: relative;
+height: 30rem;
+}
+
+
+    #slide.open1{
+        background-image: url('../img/1.jpg');
+      
+    }
+    #slide.open2{
+        background-image: url('../img/2.jpg');
+       
+    
+    }
+    
+    #slide.open3{
+        background-image: url('../img/3.jpg');
+      
+    }
+    #slide.open4{
+        background-image: url('../img/4.jpg');
+      
+    }
+    #slide.open5{
+        background-image: url('../img/5.jpg');
+      
+    }
+    #slide.open6{
+        background-image: url('../img/6.jpg');
+      
+    }
+    
